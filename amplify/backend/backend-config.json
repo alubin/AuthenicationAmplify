@@ -1,0 +1,27 @@
+{
+	"auth": {
+		"amplifygraphqlexampl7a2838fb": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"api": {
+		"amplifygraphqlexampl": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authamplifygraphqlexampl7a2838fb"
+						}
+					}
+				}
+			}
+		}
+	}
+}
